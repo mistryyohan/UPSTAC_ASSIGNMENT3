@@ -53,12 +53,8 @@ public class LabRequestController {
     @PreAuthorize("hasAnyRole('TESTER')")
     public List<TestRequest> getForTests()  {
 
-
        return testRequestQueryService.findBy(RequestStatus.INITIATED);
-
-
-
-
+        
     }
 
     @GetMapping
