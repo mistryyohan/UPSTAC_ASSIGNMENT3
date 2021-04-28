@@ -52,18 +52,8 @@ public class ConsultationController {
     @PreAuthorize("hasAnyRole('DOCTOR')")
     public List<TestRequest> getForConsultations()  {
 
-        // Implement this method
-
-
-        //Implement this method to get the list of test requests having status as 'LAB_TEST_COMPLETED'
-        // make use of the findBy() method from testRequestQueryService class
-        //return the result
-        // For reference check the method getForTests() method from LabRequestController class
         return testRequestQueryService.findBy(RequestStatus.LAB_TEST_COMPLETED);
-        // replace this line of code with your implementation
-       // throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
-
-
+       
     }
 
     @GetMapping
